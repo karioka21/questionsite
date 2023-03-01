@@ -13,7 +13,6 @@ def h_decode(h):
     if z:
         return z[0]
 
-
 class HashIdConverter:
     regex = '[a-zA-Z0-9]{8,}'
 

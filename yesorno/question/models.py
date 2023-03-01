@@ -5,10 +5,10 @@ from question.utils import h_encode
 
 
 class Question(models.Model):
-    question = models.CharField(max_length=200)
-    answer_yes = models.CharField(max_length=25)
-    answer_no = models.CharField(max_length=25)
-    time_create = models.DateTimeField(auto_now_add=True)
+    question = models.CharField(max_length=200, null=True)
+    answer_yes = models.CharField(max_length=25, null=True)
+    answer_no = models.CharField(max_length=25, null=True)
+    time_create = models.DateTimeField(auto_now_add=True, null=True)
 
 #добавить время жизни
 
