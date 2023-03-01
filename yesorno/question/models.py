@@ -5,9 +5,9 @@ from question.utils import h_encode
 
 
 class Question(models.Model):
-    text = models.CharField(max_length=255)
-    choice_yes = models.CharField(max_length=255)
-    choice_no = models.CharField(max_length=255)
+    text = models.CharField(max_length=200)
+    choice_yes = models.CharField(max_length=25)
+    choice_no = models.CharField(max_length=25)
     time_create = models.DateTimeField(auto_now_add=True)
 
 #добавить время жизни

@@ -23,6 +23,6 @@ register_converter(HashIdConverter, 'hashid')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/questionlist/', QuestionList.as_view()),
-    path('api/v1/question/<hashid:pk>', QuestionUpdate.as_view()),
+    path('questionlist/', QuestionList.as_view()),
+    path('question/<hashid:pk>', QuestionUpdate.as_view()),
 ]
