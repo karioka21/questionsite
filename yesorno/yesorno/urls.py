@@ -14,15 +14,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, register_converter
-from question.utils import HashIdConverter
+from django.urls import path
 
 from question.views import *
 
-register_converter(HashIdConverter, 'hashid')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('questionlist/', QuestionList.as_view()),
-    path('question/<hashid:pk>', QuestionUpdate.as_view()),
+    path('question/<int:pk>', QuestionUpdate.as_view()),
 ]

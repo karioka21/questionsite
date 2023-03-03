@@ -1,7 +1,6 @@
 from django.db import models
 from django.urls import reverse
 
-from question.utils import h_encode
 
 
 class Question(models.Model):
@@ -14,9 +13,6 @@ class Question(models.Model):
 
     def __str__(self):
         return self.question_text
-
-    def get_hashid(self):
-        return h_encode(self.pk)
 
     def get_absolute_url(self):
         return reverse('question', kwargs={'question_id': self.pk})
