@@ -5,7 +5,11 @@ from .models import Question
 from .serializers import QuestionSerializer
 
 
-class QuestionList(generics.ListCreateAPIView):
+class QuestionList(generics.ListAPIView):
+    queryset = Question.objects.all()
+    serializer_class = QuestionSerializer
+
+class QuestionCreate(generics.CreateAPIView):
     queryset = Question.objects.all()
     serializer_class = QuestionSerializer
 
