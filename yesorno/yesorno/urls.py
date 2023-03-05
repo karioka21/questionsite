@@ -23,5 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('questionlist/', QuestionList.as_view()),
     path('question/', QuestionCreate.as_view()),
-    path('question/<int:pk>', QuestionUpdate.as_view()),
+    path('question/<int:pk>/', QuestionUpdate.as_view()),
 ]
