@@ -23,7 +23,7 @@ class QuestionCreate(generics.CreateAPIView):
     serializer_class = QuestionSerializer
 
 
-class QuestionUpdate(generics.RetrieveUpdateDestroyAPIView):
+class QuestionUpdate(generics.RetrieveUpdateAPIView):
     queryset = Question.objects.all()
     serializer_class = QuestionSerializer
 
